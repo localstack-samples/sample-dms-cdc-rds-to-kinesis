@@ -31,6 +31,7 @@ The following diagram shows the architecture that this sample application builds
 
 ## Prerequisites
 
+- A valid [LocalStack for AWS license](https://localstack.cloud/pricing). Your license provides a `LOCALSTACK_AUTH_TOKEN` to activate LocalStack.
 - [`LOCALSTACK_AUTH_TOKEN`](https://docs.localstack.cloud/getting-started/auth-token/)
 - [Python 3.10+](https://www.python.org/downloads/) & `pip`
 - [Docker Compose](https://docs.docker.com/compose/install/) 
@@ -63,7 +64,7 @@ This will create a virtual environment and install the required Python packages 
 
 ## Deployment
 
-Start LocalStack Pro with the `LOCALSTACK_AUTH_TOKEN` pre-configured:
+Start LocalStack with the `LOCALSTACK_AUTH_TOKEN` pre-configured:
 
 ```shell
 export LOCALSTACK_AUTH_TOKEN=<your-auth-token>
