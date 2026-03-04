@@ -8,7 +8,7 @@
 | Categories   | Database Migration, Change Data Capture, Streaming                                       |
 | Level        | Intermediate                                                                             |
 | Use Case     | Database Migration, Real-time Data Replication, CDC Implementation                       |
-| GitHub       | [Repository link](https://github.com/localstack-samples/sample-dms-cdc-rds-to-kinesis)          |
+| GitHub       | [Repository link](https://github.com/localstack-samples/sample-dms-cdc-rds-to-kinesis)   |
 
 ## Introduction
 
