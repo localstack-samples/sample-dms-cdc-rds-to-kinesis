@@ -44,6 +44,7 @@ check:					  ## Check if all required prerequisites are available
 	@echo "All required prerequisites are available."
 
 start:					  ## Start localstack
+	@test -n "${LOCALSTACK_AUTH_TOKEN}" || (echo "LOCALSTACK_AUTH_TOKEN is not set. Find your token at https://app.localstack.cloud/workspace/auth-token"; exit 1)
 	$(LOCAL_ENV) LOCALSTACK_AUTH_TOKEN=$(LOCALSTACK_AUTH_TOKEN) docker compose up --build --detach --wait
 
 install: venv 		 	  ## Install dependencies	

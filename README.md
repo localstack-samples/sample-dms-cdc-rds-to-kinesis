@@ -8,7 +8,7 @@
 | Categories   | Database Migration, Change Data Capture, Streaming                                       |
 | Level        | Intermediate                                                                             |
 | Use Case     | Database Migration, Real-time Data Replication, CDC Implementation                       |
-| GitHub       | [Repository link](https://github.com/localstack-samples/sample-dms-cdc-rds-to-kinesis)          |
+| GitHub       | [Repository link](https://github.com/localstack-samples/sample-dms-cdc-rds-to-kinesis)   |
 
 ## Introduction
 
@@ -31,7 +31,7 @@ The following diagram shows the architecture that this sample application builds
 
 ## Prerequisites
 
-- [`LOCALSTACK_AUTH_TOKEN`](https://docs.localstack.cloud/getting-started/auth-token/)
+- A valid [LocalStack for AWS license](https://localstack.cloud/pricing). Your license provides a [`LOCALSTACK_AUTH_TOKEN`](https://docs.localstack.cloud/getting-started/auth-token/) to activate LocalStack.
 - [Python 3.10+](https://www.python.org/downloads/) & `pip`
 - [Docker Compose](https://docs.docker.com/compose/install/) 
 - [CDK](https://docs.localstack.cloud/user-guide/integrations/aws-cdk/) with the [`cdklocal`](https://github.com/localstack/aws-cdk-local) wrapper
@@ -63,7 +63,7 @@ This will create a virtual environment and install the required Python packages 
 
 ## Deployment
 
-Start LocalStack Pro with the `LOCALSTACK_AUTH_TOKEN` pre-configured:
+Start LocalStack with the `LOCALSTACK_AUTH_TOKEN` pre-configured:
 
 ```shell
 export LOCALSTACK_AUTH_TOKEN=<your-auth-token>
