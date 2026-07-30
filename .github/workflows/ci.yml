@@ -32,10 +32,14 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install lstk
+        run: |
+          npm install -g @localstack/lstk
+
       - name: Install CDK
         run: |
-          npm install -g aws-cdk-local aws-cdk
-          cdklocal --version
+          npm install -g aws-cdk
+          cdk --version
 
       - name: Install dependencies
         run: |

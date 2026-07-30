@@ -37,10 +37,9 @@ venv: $(VENV_ACTIVATE)    ## Create a new (empty) virtual environment
 
 check:					  ## Check if all required prerequisites are available
 	@command -v docker > /dev/null 2>&1 || { echo "Docker is not installed."; exit 1; }
-	@command -v localstack > /dev/null 2>&1 || { echo "LocalStack is not installed."; exit 1; }
-	@command -v python > /dev/null 2>&1 || { echo "Python is not installed."; exit 1; }
+	@command -v python3 > /dev/null 2>&1 || { echo "Python 3 is not installed."; exit 1; }
 	@command -v cdk > /dev/null 2>&1 || { echo "AWS CDK is not installed."; exit 1; }
-	@command -v cdklocal > /dev/null 2>&1 || { echo "CDK Local is not installed."; exit 1; }
+	@command -v lstk > /dev/null 2>&1 || { echo "lstk is not installed."; exit 1; }
 	@echo "All required prerequisites are available."
 
 start:					  ## Start localstack
@@ -51,8 +50,8 @@ install: venv 		 	  ## Install dependencies
 	$(VENV_RUN); $(PIP_CMD) install -r requirements.txt
 
 deploy:					  ## Deploy the stack on LocalStack
-	$(VENV_RUN); $(LOCAL_ENV) cdklocal bootstrap --output ./cdk.local.out
-	$(VENV_RUN); $(LOCAL_ENV) cdklocal deploy --require-approval never --output ./cdk.local.out
+	$(VENV_RUN); $(LOCAL_ENV) lstk cdk bootstrap --output ./cdk.local.out
+	$(VENV_RUN); $(LOCAL_ENV) lstk cdk deploy --require-approval never --output ./cdk.local.out
 
 deploy-aws:				 ## Deploy the stack on AWS
 	$(VENV_RUN); $(CLOUD_ENV) cdk bootstrap
