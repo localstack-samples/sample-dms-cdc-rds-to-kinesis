@@ -44,7 +44,7 @@ To run the sample application, you need to install the required dependencies.
 First, clone the repository:
 
 ```shell
-git clone https://github.com/localstack/sample-dms-cdc-rds-to-kinesis.git
+git clone https://github.com/localstack-samples/sample-dms-cdc-rds-to-kinesis.git
 ```
 
 Then, navigate to the project directory:
